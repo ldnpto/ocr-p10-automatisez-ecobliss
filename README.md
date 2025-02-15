@@ -1,47 +1,73 @@
 # Installation du projet
 
-- Téléchargez ou clonez le dépôt avec la commande :
-```
-$ git clone https://github.com/ldnpto/ocr-p10-automatisez-ecobliss
-```
-- Téléchargez puis installez [Docker](https://www.docker.com)
-- Depuis un terminal ouvert dans le dossier du projet, lancez la commande :
-```
-$ docker-compose up --build
-```
+# Guide d'Installation et Exécution des Tests
 
-- Ouvrez le site depuis la page : http://localhost:8080.
+## Installation du projet
 
-# Cypress
+- **Clonez le dépôt :**  
+    ```bash
+    git clone https://github.com/ldnpto/ocr-p10-automatisez-ecobliss
+    ```
 
-- Téléchargez puis installez [Node.js](https://nodejs.org/en/download/package-manager/current)
-- Depuis un terminal ouvert dans le dossier du projet, lancez la commande :
+- **Installez Docker :**  
+    Téléchargez et installez [Docker](https://www.docker.com).
 
-```bash
-$ npx cypress run
-```
-- Si vous souhaitez lancer les tests sur un navigateur en particulier, lancez la commande (en remplaçant <navigateur> par le navigateur de votre choix parmi Firefox, Chrome, Edge, Electron) :
+- **Démarrage du projet :**  
+    Depuis un terminal ouvert dans le dossier du projet, lancez :
+    ```bash
+    docker-compose up --build
+    ```
+    
+- **Accès au site :**  
+    Ouvrez votre navigateur et allez à l'adresse : http://localhost:8080.
 
-```bash
-$ npx cypress run --browser <navigateur>
-```
+## Tests Cypress
 
-- Une fois dans Cypress, la liste des scripts s'affiche et sont regroupées dans le repértoire "api" pour les tests d'intégration, et "ui" pour les tests fonctionnels. Il suffit de cliquer sur un script pour lancer l'exécution
+- **Installez Node.js :**  
+    Téléchargez et installez [Node.js](https://nodejs.org/en/download/package-manager/current).
 
-![Scripts Cypress](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/cypress-tests.png)
+- **Exécution des tests :**  
+    Dans un terminal à la racine du projet, lancez :
+    ```bash
+    npx cypress run
+    ```
+    
+- **Tests sur navigateur spécifique :**  
+    Remplacez `<navigateur>` par Firefox, Chrome, Edge ou Electron, puis lancez :
+    ```bash
+    npx cypress run --browser <navigateur>
+    ```
 
-Voici la liste des exécutions:
+## Lancement des Tests
 
-![Test api /login](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-login.png)
+- **Affichage des Scripts Cypress :**  
+    Choisir dans Cypress E2E testing, l'ouverture du navigateur affiche la liste des scripts disponibles.  
+    ![Scripts Cypress](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/cypress-tests.png)
 
-![Test api /orders](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-orders.png)
+- **Test API /login :**  
+    Exécution du test pour l'authentification.
+    ![Test api /login](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-login.png)
 
-![Test api /products](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-products.png)
+- **Test API /orders :**  
+    Exécution du test pour les commandes.  
+    ![Test api /orders](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-orders.png)
 
-![Test api /reviews](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-reviews.png)
+- **Test API /products :**  
+    Exécution du test pour la gestion des produits.  
+    ![Test api /products](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-products.png)
 
-![Test ui login](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/ui-login.png)
+- **Test API /reviews :**  
+    Exécution du test pour les avis.  
+    ![Test api /reviews](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-reviews.png)
 
-![Test ui orders](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/ui-panier.png)
+- **Test UI login :**  
+    Exécution du test de connexion via l'interface utilisateur.  
+    ![Test ui login](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/ui-login.png)
 
-![Test ui smoke](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/ui-smoke.png)
+- **Test UI orders :**  
+    Exécution du test de gestion du panier via l'interface utilisateur.  
+    ![Test ui orders](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/ui-panier.png)
+
+- **Test UI smoke :**  
+    Exécution du test global de fumée pour vérifier l'intégrité du système.  
+    ![Test ui smoke](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/ui-smoke.png)

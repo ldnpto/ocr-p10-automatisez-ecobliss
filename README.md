@@ -26,6 +26,22 @@ $ npx cypress run
 $ npx cypress run --browser <navigateur>
 ```
 
-# Rapports de test
+- Une fois dans Cypress, la liste des scripts s'affiche et sont regroupées dans le repértoire "api" pour les tests d'intégration, et "ui" pour les tests fonctionnels. Il suffit de cliquer sur un script pour lancer l'exécution
 
-- A la suite de l'exécution des tests , les rapports seront disponibles dans le dossier _mochawesome-report_ aux formats HTML et JSON.
+![Scripts Cypress](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/cypress-tests.png)
+
+Voici la liste des exécutions:
+
+![Test api /login](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-login.png)
+
+![Test api /orders](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-orders.png)
+
+![Test api /products](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-products.png)
+
+![Test api /reviews](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/api-reviews.png)
+
+![Test ui login](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/ui-login.png)
+
+![Test ui orders](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/ui-panier.png)
+
+![Test ui smoke](https://github.com/ldnpto/ocr-p10-automatisez-ecobliss/blob/977d37855b4402b80845a1cd8154431e4920585b/cypress/downloads/ui-smoke.png)

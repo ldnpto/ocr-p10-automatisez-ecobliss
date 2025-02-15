@@ -1,6 +1,31 @@
 # Installation du projet
-1. Téléchargez ou clonez le dépôt
-2. Depuis un terminal ouert dans le dossier du projet, lancer la commande : `sudo docker-compose up --build`
-3. Ouvrez le site depuis la page http://localhost:8080 
 
-Nb : à l'étape 2, ne pas ajouter le `sudo` si vous êtes sous Windows (sauf dernière version de Windows 11) (PowerShell ou Shell) : sudo n'existant pas et Docker Desktop configurant automatiquement Docker pour ne pas avoir besoin des droits administrateur.
+- Téléchargez ou clonez le dépôt avec la commande :
+```
+$ git clone https://github.com/ldnpto/ocr-p10-automatisez-ecobliss
+```
+- Téléchargez puis installez [Docker](https://www.docker.com)
+- Depuis un terminal ouvert dans le dossier du projet, lancez la commande :
+```
+$ docker-compose up --build
+```
+
+- Ouvrez le site depuis la page : http://localhost:8080.
+
+# Cypress
+
+- Téléchargez puis installez [Node.js](https://nodejs.org/en/download/package-manager/current)
+- Depuis un terminal ouvert dans le dossier du projet, lancez la commande :
+
+```bash
+$ npx cypress run
+```
+- Si vous souhaitez lancer les tests sur un navigateur en particulier, lancez la commande (en remplaçant <navigateur> par le navigateur de votre choix parmi Firefox, Chrome, Edge, Electron) :
+
+```bash
+$ npx cypress run --browser <navigateur>
+```
+
+# Rapports de test
+
+- A la suite de l'exécution des tests , les rapports seront disponibles dans le dossier _mochawesome-report_ aux formats HTML et JSON.
